@@ -1,6 +1,7 @@
 package com.maskedcarrot.dao
 
 import com.maskedcarrot.models.Contests
+import com.maskedcarrot.models.Platforms
 import kotlinx.coroutines.Dispatchers
 import org.jetbrains.exposed.sql.Database
 import org.jetbrains.exposed.sql.SchemaUtils
@@ -14,6 +15,7 @@ object DatabaseFactory {
         val database = Database.connect(jdbcURL, driverClassName)
         transaction(database) {
             SchemaUtils.create(Contests)
+            SchemaUtils.create(Platforms)
         }
     }
 

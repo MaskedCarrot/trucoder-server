@@ -32,7 +32,7 @@ class DAOContestImp : DAOContest {
     private fun resultRowToContest(row: ResultRow) = Contest(
         id = row[Contests.id],
         name = row[Contests.name],
-        platformId = 12,//row[Contests.platformId],
+        platformId = row[Contests.platformId],
         url = row[Contests.url],
         startTime = row[Contests.startTime],
         endTime = row[Contests.endTime],

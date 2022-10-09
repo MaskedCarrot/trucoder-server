@@ -14,7 +14,7 @@ data class Platform (
 object Platforms : Table() {
     val id = integer("id").autoIncrement()
     val name = varchar("name", 128)
-    val url = varchar("name", 256)
+    val url = varchar("url", 256)
     val logoUrl = varchar("logoUrl", 256)
 
     override val primaryKey = PrimaryKey(Contests.id)
